@@ -64,6 +64,7 @@ client.on('message', message => {
 		if ((message.member && message.member.id === CONSTANTS.BOTID) ||
 			(message.author && message.author.id === CONSTANTS.BOTID)) return;
 
+		if ((message.member && message.member.bot === true) || (message.author && message.author.bot === true)) return;
 		//TESTING PURPOSES ONLY PLEASE REMOVE
 		//if (message.channel.name !== 'professor_redwood') return;
 
